@@ -43,7 +43,11 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig', 
     'posts.apps.PostsConfig', 
 ]
-
+REST_FRAMEWORK = { # new
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
